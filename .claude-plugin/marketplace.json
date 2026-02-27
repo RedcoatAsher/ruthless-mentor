@@ -8,6 +8,10 @@
   "plugins": [
     {
       "name": "ruthless-mentor",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rivit-studio/ruthless-mentor.git"
+      },
       "description": "A ruthless, no-BS mentor that rates your ideas 0-10, calls out weaknesses, and stress-tests everything until it's bulletproof. 12 swappable character personas. Decision tracking across sessions.",
       "version": "1.0.0",
       "category": "productivity",
