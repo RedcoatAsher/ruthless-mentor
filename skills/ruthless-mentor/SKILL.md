@@ -89,7 +89,7 @@ The conversation is the working state. As the mentor identifies flaws and the us
 
 All tracking files are stored in a `ruthless-mentor-log/` directory in the project root. Create this directory and any files on first use.
 
-```
+```text
 ruthless-mentor-log/
 ├── RM_pending.md    — Write-ahead buffer. Flaws identified but not yet decided on.
 ├── RM_accepted.md   — Flaws the user agreed with and is acting on
@@ -100,7 +100,7 @@ ruthless-mentor-log/
 
 ### Decision Flow
 
-```
+```text
 Mentor identifies flaw
         │
         ▼
