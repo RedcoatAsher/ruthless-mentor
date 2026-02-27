@@ -169,10 +169,6 @@ ruthless-mentor-log/
 - **Token-efficient.** No duplicate data. No unnecessary file reads. Each entry lives in exactly one place.
 - **Crash-safe.** Write-ahead buffer ensures no data loss if a session ends unexpectedly.
 
-## License
-
-MIT
-
 ## Author
 
 Asher / [Trust Fall Technology Group](https://github.com/RedcoatAsher)
