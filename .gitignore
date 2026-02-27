@@ -1,1 +1,12 @@
 .DS_Store
+/.claude
+.env
+.envrc
+/.gir
+.mcp.json
+.gir-*
+CLAUDE-*
+CLAUDE.*
+*-CLAUDE.*
+AGENTS.md
+RALPH-LOOPS.md
