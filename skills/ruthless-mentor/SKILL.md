@@ -165,7 +165,7 @@ Every entry across all three files uses this identical format:
 - **Context**: [Brief description of what was being discussed when this was identified]
 ```
 
-**ID Assignment**: Use a simple incrementing integer (RM-001, RM-002, etc.). Check the highest existing ID across ALL three files before assigning a new one to avoid collisions. The ID stays with the entry forever, even as it moves between files.
+**ID Assignment**: Use a simple incrementing integer (RM-001, RM-002, etc.). Check the highest existing ID across ALL four files (`RM_pending.md`, `RM_accepted.md`, `RM_rejected.md`, `RM_graveyard.md`) before assigning a new one to avoid collisions. The ID stays with the entry forever, even as it moves between files.
 
 **No status field.** The file the entry lives in IS its status:
 - In `RM_accepted.md` → accepted
@@ -183,7 +183,7 @@ Every entry across all three files uses this identical format:
 
 ### Pending Buffer Rules
 
-`RM_pending.md` is a **write-ahead log**, not a long-lived file. It should be empty at the end of every normal session.
+`RM_pending.md` is a **write-ahead log**, not a long-lived file. Entries are cleared as decisions are made. Any entries that remain at session end (flaws raised but not yet explicitly decided on) persist for the next session to resolve.
 
 - **Write immediately**: As soon as the mentor identifies a flaw, write it to pending BEFORE presenting it to the user. This ensures the data survives a crash.
 - **Clear on decision**: The moment the user accepts or rejects a flaw, move it out of pending.
@@ -313,4 +313,4 @@ Then present the available personas briefly. If the user doesn't care, use `defa
   ```
 - If the project has a `.gitignore`, suggest adding `ruthless-mentor-log/` to it on first setup.
 - Always append new entries — never overwrite existing content.
-- `RM_pending.md` should be empty at the end of every normal session. If it's not, the next session will clean it up.
+- `RM_pending.md` may have leftover entries at session end if the user didn't explicitly decide on every raised flaw. The next session will resolve them.

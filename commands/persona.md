@@ -25,7 +25,7 @@ The user wants to change the mentor's voice. The argument is: "$ARGUMENTS"
 
 ## Behavior
 
-1. If the user provides a keyword (e.g., `/ruthless-mentor:persona gunny`), load the corresponding persona file from `personas/` and adopt that voice immediately.
+1. If the user provides a keyword (e.g., `/ruthless-mentor:persona gunny`), load the corresponding persona file from `skills/ruthless-mentor/personas/` and adopt that voice immediately.
 2. If no argument or an unrecognized keyword is given, display the table above and ask the user to choose.
 3. When switching, confirm the change: "Persona switched to [name]. All future feedback will be delivered in this voice."
 4. Store the current persona preference in `ruthless-mentor-log/RM_config.md` so it persists across sessions:
@@ -33,5 +33,5 @@ The user wants to change the mentor's voice. The argument is: "$ARGUMENTS"
    <!-- Ruthless Mentor Configuration -->
    persona: gunny
    ```
-5. On session start, check `RM_config.md` for a stored persona preference. If found, load it silently. If not found, use `default`.
+5. On session start, check `ruthless-mentor-log/RM_config.md` for a stored persona preference. If found, load it silently. If not found, use `default`.
 6. The persona changes HOW feedback is delivered. It does NOT change WHAT gets evaluated. The full evaluation framework (rating, weakness hunting, bulletproof loop, decision tracking) applies identically regardless of persona.
