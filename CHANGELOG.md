@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — 2026-02-26
+## 1.0.0 — 2026-02-27
 
 ### Added
 - Core ruthless mentor skill with 0-10 rating framework
@@ -18,3 +18,11 @@
 - `/ruthless-mentor:review-rejected` slash command
 - `/ruthless-mentor:search-decisions` slash command with smart file targeting
 - Bulletproof loop — keeps pushing until it's ready to ship
+
+### Fixed
+- Path consistency: all file references now use `ruthless-mentor-log/` uniformly
+- ID collision: new entries scan all four tracking files before assigning an ID to prevent duplicates
+- Persona keyword validation: SKILL.md now validates against an explicit allowlist; invalid keywords reject gracefully
+- Cardinality wording: corrected entry format descriptions to match one-to-one file semantics
+- ID assignment clarified as an atomic scan-then-append step within the logging flow
+- Pending buffer documentation updated to accurately describe end-of-session behavior

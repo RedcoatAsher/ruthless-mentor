@@ -27,7 +27,7 @@ RM_graveyard.md — Rejected twice. Buried but searchable.
 ### From a marketplace
 
 ```
-/plugin marketplace add RedcoatAsher/ruthless-mentor
+/plugin marketplace add rivit-studio/ruthless-mentor
 /plugin install ruthless-mentor
 ```
 
