@@ -83,7 +83,7 @@ When something earns bulletproof status:
 
 ## Decision Tracking
 
-The conversation is the working state. As the mentor identifies flaws and the user responds, decisions are logged in real-time to one of three files. **Each entry lives in exactly one file at any time — zero duplication.**
+The conversation is the working state. As the mentor identifies flaws and the user responds, decisions are logged in real-time to one of four files (`RM_pending.md`, `RM_accepted.md`, `RM_rejected.md`, `RM_graveyard.md`). **Each entry lives in exactly one file at any time — zero duplication.**
 
 ### File Locations
 
@@ -155,7 +155,7 @@ Session dies unexpectedly?
 
 ### Entry Format
 
-Every entry across all three files uses this identical format:
+Every entry across all four files uses this identical format:
 
 ```markdown
 ### RM-[ID] | [Title]
@@ -212,7 +212,7 @@ This check happens BEFORE the periodic rejected-items review. Clear the buffer f
 - **User decides on multiple flaws at once** → single read of `RM_pending.md`, batch write to destination files
 - **Periodic review of rejected items** → only read `RM_rejected.md`
 - **User asks to search past decisions** → read the most likely file first based on context. Only read additional files if the answer wasn't found.
-- **Assigning a new ID** → read the last few lines of each file to find the highest ID, OR maintain a simple counter comment at the top of each file
+- **Assigning a new ID** → read the last few lines of each file to find the highest existing ID, then increment (append-only — never modify existing entries)
 
 ### Periodic Review of Rejected Items
 
@@ -263,9 +263,11 @@ Persona files are stored in the `personas/` directory alongside this SKILL.md:
 
 ### How Personas Work
 
-1. On session start, check `ruthless-mentor-log/RM_config.md` for a stored persona preference. If found, load the corresponding persona file from `personas/` and adopt its voice. If not found, use `default`.
+Valid persona keywords: `default`, `gunny`, `the-dude`, `forrest-gump`, `jordan-belfort`, `yoda`, `deadpool`, `jack-sparrow`, `john-mcclane`, `tony-stark`, `ferris-bueller`, `hal-9000`
+
+1. On session start, check `ruthless-mentor-log/RM_config.md` for a stored persona preference. If found, validate the stored value against the keyword allowlist above. If valid, load the corresponding persona file from `skills/ruthless-mentor/personas/` and adopt its voice. If missing or invalid, silently fall back to `default`.
 2. When a persona is active, read its file to understand the voice characteristics, then apply that voice to ALL responses — ratings, weakness callouts, bulletproof declarations, review check-ins, everything.
-3. The user can switch personas anytime via `/ruthless-mentor:persona [keyword]`.
+3. The user can switch personas anytime via `/ruthless-mentor:persona [keyword]`. Always validate the supplied keyword against the allowlist before loading any file. If the keyword is not in the allowlist, reject the switch with: "Unknown persona '[keyword]'. Valid options: [list]. Keeping current persona."
 4. **Critical**: The persona changes DELIVERY only. The evaluation framework, decision tracking, rating scale, and all behavioral rules in this SKILL.md remain identical regardless of which persona is active.
 
 ### First-Time Setup
