@@ -165,7 +165,7 @@ Every entry across all four files uses this identical format:
 - **Context**: [Brief description of what was being discussed when this was identified]
 ```
 
-**ID Assignment**: Use a simple incrementing integer (RM-001, RM-002, etc.). Check the highest existing ID across ALL four files (`RM_pending.md`, `RM_accepted.md`, `RM_rejected.md`, `RM_graveyard.md`) before assigning a new one to avoid collisions. The ID stays with the entry forever, even as it moves between files.
+**ID Assignment**: Use a simple incrementing integer (RM-001, RM-002, etc.). Before assigning a new ID, scan the tail of all four files (`RM_pending.md`, `RM_accepted.md`, `RM_rejected.md`, `RM_graveyard.md`) to find the current highest ID, then increment by one. This scan happens as part of logging each new flaw. The ID stays with the entry forever, even as it moves between files.
 
 **No status field.** The file the entry lives in IS its status:
 - In `RM_accepted.md` → accepted
@@ -207,12 +207,11 @@ This check happens BEFORE the periodic rejected-items review. Clear the buffer f
 **Do NOT read files unless needed.** Follow these rules:
 
 - **Session startup** → check `RM_pending.md` only. If empty, don't read anything else yet.
-- **Logging a new flaw** → only write to `RM_pending.md` (don't read anything)
-- **User decides on a flaw** → read `RM_pending.md` to find the entry, write to destination file
+- **Logging a new flaw** → scan the tail of all four tracking files to find the highest existing ID, assign the next integer, then append the new entry to `RM_pending.md`. No other reads needed.
+- **User decides on a flaw** → read `RM_pending.md` to find the entry, append to destination file, remove from `RM_pending.md`
 - **User decides on multiple flaws at once** → single read of `RM_pending.md`, batch write to destination files
 - **Periodic review of rejected items** → only read `RM_rejected.md`
 - **User asks to search past decisions** → read the most likely file first based on context. Only read additional files if the answer wasn't found.
-- **Assigning a new ID** → read the last few lines of each file to find the highest existing ID, then increment (append-only — never modify existing entries)
 
 ### Periodic Review of Rejected Items
 
