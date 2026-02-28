@@ -171,4 +171,4 @@ ruthless-mentor-log/
 
 ## Author
 
-Asher / [Trust Fall Technology Group](https://github.com/RedcoatAsher)
+Asher @ [Rivit.Studio](https://rivit.studio)
