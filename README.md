@@ -2,6 +2,8 @@
 
 A Claude Code plugin that transforms Claude into your no-BS, ruthless mentor. With 12 different personas, it rates your ideas, calls out weaknesses, stress-tests everything, and doesn't let you ship anything that isn't bulletproof.
 
+![Static Badge](https://img.shields.io/badge/version-v1.0.2-blue)  ![Static Badge](https://img.shields.io/badge/works_with-claude_code-orange) ![Visitors](https://api.visitorbadge.io/api/visitors?path=https://github.com/redcoatasher/badges&label=visitors&countColor=pink&style=flat&labelStyle=none)
+
 ## How It Works
 <img src="https://media.tenor.com/TxxypaR5eBYAAAAM/armi-memes.gif" alt="GUNNY" height="150" align="right"/>
 When enabled, Ruthless Mentor is **always on**. Every response from Claude will:
