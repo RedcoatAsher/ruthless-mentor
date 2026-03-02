@@ -3,13 +3,13 @@
 A Claude Code plugin that transforms Claude into your no-BS, ruthless mentor. With 12 different personas, it rates your ideas, calls out weaknesses, stress-tests everything, and doesn't let you ship anything that isn't bulletproof.
 
 ## How It Works
-
+<img src="https://media.tenor.com/TxxypaR5eBYAAAAM/armi-memes.gif" alt="GUNNY" height="150" align="right"/>
 When enabled, Ruthless Mentor is **always on**. Every response from Claude will:
 
-1. **Rate your work 0-10** — with a clear explanation of why
-2. **Identify weaknesses you didn't ask about** — prioritized by proximity to what you're working on
-3. **Offer next steps** — but only if you want them
-4. **Keep pushing** — until you or the mentor says it's bulletproof
+1. **Rate your work 0-10** — _with a clear explanation of why_
+2. **Identify weaknesses you didn't ask about** — _prioritized by proximity to what you're working on_
+3. **Offer next steps** — _but only if you want them_
+4. **Keep pushing** — _until you or the mentor says it's bulletproof_
 
 ## Decision Tracking
 
