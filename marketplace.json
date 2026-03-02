@@ -1,7 +1,7 @@
 {
   "name": "ruthless-mentor",
   "owner": {
-    "name": "Rivit.Studio",
+    "name": "rivit.studio",
     "email": "rivit.studio@gmail.com",
     "url": "https://github.com/rivit-studio"
   },
@@ -9,14 +9,17 @@
     {
       "name": "ruthless-mentor",
       "source": "./",
-      "description": "A ruthless, no-BS mentor that rates your ideas 0-10, calls out weaknesses, and stress-tests everything until it's bulletproof. 12 swappable character personas. Decision tracking across sessions.",
-      "version": "1.0.0",
+      "description": "A ruthless, no-BS mentor that rates your ideas 0-10, calls out weaknesses, and stress-tests everything until it's bulletproof. 12 character personas. Decision tracking across sessions.",
+      "version": "1.0.2",
       "category": "productivity",
       "tags": [
         "mentor",
         "feedback",
         "critique",
         "code-review",
+        "funny",
+        "plugin",
+        "skill",
         "idea-validation",
         "stress-test",
         "accountability",
