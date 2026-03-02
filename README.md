@@ -28,6 +28,8 @@ RM_graveyard.md — Rejected twice. Buried but searchable.
 
 ```
 /plugin marketplace add rivit-studio/ruthless-mentor
+```
+```
 /plugin install ruthless-mentor
 ```
 
