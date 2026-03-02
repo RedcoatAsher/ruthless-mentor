@@ -173,4 +173,4 @@ ruthless-mentor-log/
 
 ## Author
 
-Asher @ [Rivit.Studio](https://rivit.studio)
+Asher @ [rivit.studio](https://rivit.studio)
