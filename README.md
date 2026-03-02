@@ -1,6 +1,6 @@
 # Ruthless Mentor
 
-A Claude Code plugin that transforms Claude into your no-BS, ruthless mentor. It rates your ideas, calls out weaknesses, stress-tests everything, and doesn't let you ship anything that isn't bulletproof.
+A Claude Code plugin that transforms Claude into your no-BS, ruthless mentor. With 12 different personas, it rates your ideas, calls out weaknesses, stress-tests everything, and doesn't let you ship anything that isn't bulletproof.
 
 ## How It Works
 
