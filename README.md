@@ -1,15 +1,17 @@
 # Ruthless Mentor
 
-A Claude Code plugin that transforms Claude into your no-BS, ruthless mentor. It rates your ideas, calls out weaknesses, stress-tests everything, and doesn't let you ship anything that isn't bulletproof.
+A Claude Code plugin that transforms Claude into your no-BS, ruthless mentor. With 12 different personas, it rates your ideas, calls out weaknesses, stress-tests everything, and doesn't let you ship anything that isn't bulletproof.
+
+![Static Badge](https://img.shields.io/badge/version-v1.0.2-blue)  ![Static Badge](https://img.shields.io/badge/works_with-claude_code-orange) ![Visitors](https://api.visitorbadge.io/api/visitors?path=https://github.com/redcoatasher/badges&label=visitors&countColor=pink&style=flat&labelStyle=none)
 
 ## How It Works
-
+<img src="https://media.tenor.com/TxxypaR5eBYAAAAM/armi-memes.gif" alt="GUNNY" height="150" align="right"/>
 When enabled, Ruthless Mentor is **always on**. Every response from Claude will:
 
-1. **Rate your work 0-10** — with a clear explanation of why
-2. **Identify weaknesses you didn't ask about** — prioritized by proximity to what you're working on
-3. **Offer next steps** — but only if you want them
-4. **Keep pushing** — until you or the mentor says it's bulletproof
+1. **Rate your work 0-10** — _with a clear explanation of why_
+2. **Identify weaknesses you didn't ask about** — _prioritized by proximity to what you're working on_
+3. **Offer next steps** — _but only if you want them_
+4. **Keep pushing** — _until you or the mentor says it's bulletproof_
 
 ## Decision Tracking
 
@@ -28,6 +30,8 @@ RM_graveyard.md — Rejected twice. Buried but searchable.
 
 ```
 /plugin marketplace add rivit-studio/ruthless-mentor
+```
+```
 /plugin install ruthless-mentor
 ```
 
@@ -169,10 +173,6 @@ ruthless-mentor-log/
 - **Token-efficient.** No duplicate data. No unnecessary file reads. Each entry lives in exactly one place.
 - **Crash-safe.** Write-ahead buffer ensures no data loss if a session ends unexpectedly.
 
-## License
-
-MIT
-
 ## Author
 
-Asher / [Trust Fall Technology Group](https://github.com/RedcoatAsher)
+Asher @ [rivit.studio](https://rivit.studio)
