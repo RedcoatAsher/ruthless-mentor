@@ -9,7 +9,7 @@
     {
       "name": "ruthless-mentor",
       "source": "./",
-      "description": "A ruthless, no-BS mentor that rates your ideas 0-10, calls out weaknesses, and stress-tests everything until it's bulletproof. 12 character personas. Decision tracking across sessions.",
+      "description": "A ruthless, no-BS mentor that rates your ideas 0-10, calls out weaknesses, and stress-tests everything until it's bulletproof. 12 swappable character personas. Decision tracking across sessions.",
       "version": "1.0.2",
       "category": "productivity",
       "tags": [
